@@ -25,10 +25,11 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    960px;
+$content-width:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
+$desktop:          1000px;
 
 
 
@@ -40,7 +41,7 @@ $on-laptop:        800px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
+    @media screen and (min-width: $device) {
         @content;
     }
 }
@@ -55,17 +56,33 @@ $on-laptop:        800px;
 
 // = General
 // ==========================
-h1, h2, h3, h4, h5, h6 { font-family: $display-font-family; font-weight: normal; text-transform: uppercase; line-height: 1em;}
+h1, h2, h3, h4, h5, h6 { font-family: $display-font-family; font-weight: normal; text-transform: uppercase; line-height: 1em; font-size: 42px;}
 .page-content {padding: 0;}
+
 
 // = Home 
 // ==========================
 .page-header { text-align: center; background:#5c94fc url(img/header.png) no-repeat center bottom; background-size: cover; padding: 100px 0 300px;
   h2 {font-size: 48px;}
-  h1 {font-size: 88px;}
+  h1 {font-size: 82px;}
   p {font-size: 28px; padding: 0 20px;}
   .wedding-date {font-size: 42px; font-family: $display-font-family;}
 }
+
+
+// = Event
+// ==========================
+#event { background:#000; padding: 60px 0; font-size: 18px;
+  .wrapper {}
+  .data {font-size: 24px;}
+  .footer-evento {display: none;}
+  @include media-query($desktop) {
+    background: #000 url(img/bg-evento.png) repeat-y center center; padding-bottom: 0;
+    .wrapper {padding-right: 60px;}
+    .footer-evento {display: block; margin: 0 auto;}
+  }
+}
+
 
 
 
