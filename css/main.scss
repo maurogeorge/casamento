@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $display-font-family; font-weight: normal;
   .wrapper {}
   .data {font-size: 24px;}
   .footer-evento {display: none;}
-  @include media-query($desktop) {
+  @include media-query(1032px) {
     background: #000 url(img/bg-evento.png) repeat-y center center; padding-bottom: 0;
     .wrapper {padding-right: 60px;}
     .footer-evento {display: block; margin: 0 auto;}
