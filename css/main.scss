@@ -78,6 +78,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $display-font-family; font-weight: normal;
   .wrapper {}
   .data {font-size: 24px;}
   .footer-evento {display: none;}
+  .coins {display: block; margin: 60px auto;}
   @include media-query(1032px) {
     background: #000 url(img/bg-evento.png) repeat-y center center; padding-bottom: 0;
     .wrapper {padding-right: 60px;}
@@ -152,6 +153,32 @@ h1, h2, h3, h4, h5, h6 { font-family: $display-font-family; font-weight: normal;
       float: left;
     }
   }
+}
+
+
+// = Cerimonia
+// ==========================
+#cerimony { background:#5c94fc; padding-top: 100px;
+  h2 {font-size: 34px; padding-top: 30px;}
+  h3 {font-size: 28px; height: 55px; text-align: center; vertical-align: baseline;
+    img {vertical-align: baseline;}
+  }
+  .women, .men { margin-bottom: 60px;
+    img {margin-right: 10px;}
+    p {color:#414141; background: #fff; border-radius: 4px; padding: 20px;}
+  }
+  .men img {margin-left: 10px;}
+
+  @include media($on-palm) {
+    .women, .men { @include span-columns(6);}
+  }
+}
+
+
+// = Festa
+// ==========================
+#party {background:#2038ec; padding-top: 100px;
+
 }
 
 
