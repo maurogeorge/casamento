@@ -178,15 +178,23 @@ h1, h2, h3, h4, h5, h6 { font-family: $display-font-family; font-weight: normal;
 // = Festa
 // ==========================
 #party {background:#2038ec; padding-top: 80px;
-  .footer-bg {margin-top: 120px;}
-  .festa {@include span-columns(6); }
-  .trajes {@include span-columns(6); @include omega; background:#fff; border-radius: 4px; float: right; padding: 20px;
-    h3 {color:#414141; margin-top: 0;}
+  .footer-bg {margin-top: 120px; margin-bottom: 0;}
+  .festa {}
+  .trajes { background:#fff; border-radius: 4px; float: right; padding: 20px;
+    h3 {color:#414141; padding-top: 0;}
     p {color:#414141;
       &:last-of-type {margin-bottom: 0;}
     }
   }
-  h3 {@include clearfix; clear: both; margin-top: 30px;}
+  h3 {@include clearfix; clear: both; padding-top: 30px;}
+  img {display: block; margin: 40px auto 20px; clear: both; @include clearfix;}
+  ul { list-style-image:url('img/icon-peixe.png');
+
+  }
+  @include media($on-palm) {
+    .festa {@include span-columns(6); }
+    .trajes {@include span-columns(6); @include omega; @include clearfix; margin-bottom: 20px;}
+  }
 }
 
 
