@@ -102,7 +102,7 @@ header.navigation {
     float: left;
     max-height: $navigation-height;
     line-height: $navigation-height;
-    padding-right: 2*$navigation-padding;
+    padding-right: 2em;
     font-family: $display-font-family;
     text-transform: uppercase;
     font-weight: normal;
@@ -157,7 +157,7 @@ header.navigation {
     z-index: 9999;
 
     &.show {
-      display: block;
+      display: inline;
     }
 
     @include media ($horizontal-bar-mode) {
@@ -174,16 +174,18 @@ header.navigation {
     display: block;
     line-height: $navigation-height;
     overflow: hidden;
-    padding-right: 0.8em;
-    text-align: center;
+    padding-right: 2em;
+    text-align: left;
     width: 100%;
     z-index: 9999;
+    &:last-of-type {padding-right: 0;}
 
     @include media ($horizontal-bar-mode) {
       background: transparent;
       display: inline;
       line-height: $navigation-height;
       text-decoration: none;
+      text-align: center;
       width: auto;
     }
 
@@ -194,7 +196,6 @@ header.navigation {
       width: 100%;
 
       @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
         width: auto;
       }
 
