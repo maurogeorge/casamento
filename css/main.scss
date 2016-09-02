@@ -91,19 +91,24 @@ header.navigation {
     @include clearfix;
     position: relative;
     z-index: 9999;
-    text-align: center;
+    text-align: left;
+
+    @include media ($horizontal-bar-mode) {
+      text-align: center;
+    }
   }
 
   .logo {
     float: left;
     max-height: $navigation-height;
-    padding-left: $navigation-padding;
-    padding-right: 2em;
     line-height: $navigation-height;
+    padding-right: 2*$navigation-padding;
+    font-family: $display-font-family;
+    text-transform: uppercase;
+    font-weight: normal;
 
-    img {
-      max-height: $navigation-height;
-      padding: 0.8em 0;
+    @include media ($horizontal-bar-mode) {
+      float: none;
     }
   }
 
@@ -138,7 +143,7 @@ header.navigation {
 
 
     @include media ($horizontal-bar-mode) {
-      float: right;
+      display: inline;
     }
   }
 
