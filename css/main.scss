@@ -198,5 +198,28 @@ h1, h2, h3, h4, h5, h6 { font-family: $display-font-family; font-weight: normal;
 }
 
 
+// = Lista de Presentes
+// ==========================
+#gifts { background:#5c94fc; padding-top: 80px;
+  h1 {padding: 30px 0 20px; clear: both; @include clearfix;}
+  ul {list-style:none; margin-left: 0;
+    li { padding-left: 30px; background:url('img/icon-coin.png') no-repeat; margin-top: 10px;}
+  }
+  .footer-bg {margin-top: 60px;} 
+  .center {text-align: center;}
+
+  .powerup { text-align: center; font-family: $display-font-family; font-size: 28px; margin: 20px 0; position: relative; background:transparent url('img/button.png') center top no-repeat;
+    .button-submit {@include transition(opacity 0.4s ease-in); max-width: 150px; width: 100%; margin: 0 auto; opacity: 0;
+      &:hover {opacity: 1;}
+    }
+    &:hover {background:none;}
+  }
+
+  @include media($on-palm) {
+    .powerup {@include span-columns(3);
+      &:nth-of-type(4n) {@include omega;}
+    }
+  }
+}
 
 
