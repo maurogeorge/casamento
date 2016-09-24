@@ -87,6 +87,8 @@ header.navigation {
   position: fixed;
   color: $navigation-color;
 
+  .wrapper {max-width:100%;}
+
   .navigation-wrapper {
     @include clearfix;
     position: relative;
@@ -121,7 +123,7 @@ header.navigation {
     line-height: $navigation-height;
     margin: 0;
     padding-right: 1em;
-    width: 31px;
+    width: 31px;  
     text-decoration: none;
     text-transform: uppercase;
 
@@ -444,7 +446,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $display-font-family; font-weight: normal;
   .data {font-size: 24px;}
   .footer-evento {display: none;}
   .coins {display: block; margin: 60px auto;}
-  @include media-query(1032px) {
+  @include media(1032px) {
     background: #000 url(img/bg-evento.png) repeat-y center center; padding-bottom: 0;
     .wrapper {padding-right: 60px;}
     .footer-evento {display: block; margin: 0 auto;}
