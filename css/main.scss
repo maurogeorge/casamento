@@ -436,12 +436,16 @@ h1, h2, h3, h4, h5, h6 { font-family: $display-font-family; font-weight: normal;
   h1 {font-size: 82px;}
   p {font-size: 28px; padding: 0 20px;}
   .wedding-date {font-size: 42px; font-family: $display-font-family;}
+  @include media(max-width 480px $on-laptop) {
+    h1 {font-size: 72px;}
+    h2 {font-size: 38px;}
+  }
 }
 
 
 // = Event
 // ==========================
-#event { background:#000; padding: 60px 0; font-size: 18px;
+#event { background:#000; padding: 60px 0; font-size: 18px; margin-top: -1px;
   .wrapper {}
   .data {font-size: 24px;}
   .footer-evento {display: none;}
@@ -450,6 +454,11 @@ h1, h2, h3, h4, h5, h6 { font-family: $display-font-family; font-weight: normal;
     background: #000 url(img/bg-evento.png) repeat-y center center; padding-bottom: 0;
     .wrapper {padding-right: 60px;}
     .footer-evento {display: block; margin: 0 auto;}
+  }
+
+  @include media(max-width $on-laptop) {
+    .accordion-tabs-minimal .tab-link {padding: 0;}
+    .accordion-tabs-minimal .tab-content {display: block !important; padding: 0 0 1.5em 0;}
   }
 }
 
